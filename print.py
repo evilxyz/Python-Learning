@@ -13,29 +13,29 @@ print (x, y, z)
 
 # print ([object, ...][, sep=' '][, end='\n'][, file=sys.stdout])
 
-#sep´ú±í¶à¸ö¶ÔÏóÖĞ¼äµÄ¼ä¸ô·û,Ä¬ÈÏÎª¿Õ¸ñ
-#end´ú±íÎÄ±¾Ä©Î²µÄ×Ö·û´®, Ä¬ÈÏÎª»»ĞĞ 
-#file´ú±íÄ¬ÈÏÊä³öÎ»ÖÃ, ÈÎºÎ¿ÉĞ´µÄ¶ÔÏó¶¼¿ÉÒÔ exp: open('/tmp/txt.txt', 'w')
+#sepä»£è¡¨å¤šä¸ªå¯¹è±¡ä¸­é—´çš„é—´éš”ç¬¦,é»˜è®¤ä¸ºç©ºæ ¼
+#endä»£è¡¨æ–‡æœ¬æœ«å°¾çš„å­—ç¬¦ä¸², é»˜è®¤ä¸ºæ¢è¡Œ 
+#fileä»£è¡¨é»˜è®¤è¾“å‡ºä½ç½®, ä»»ä½•å¯å†™çš„å¯¹è±¡éƒ½å¯ä»¥ exp: open('/tmp/txt.txt', 'w')
 
 
-print (x, y, z, sep='', end='\t ending...\n') #¶ÔÏóÖĞÃ»ÓĞ¼ä¸ô,
+print (x, y, z, sep='', end='\t ending...\n') #å¯¹è±¡ä¸­æ²¡æœ‰é—´éš”,
 
-print (x, y, z, sep='\n', file=open('/tmp/test.txt', 'w')) #Êä³öÎ»ÖÃ¸Ä±äÎªtest.txt
+print (x, y, z, sep='\n', file=open('/tmp/test.txt', 'w')) #è¾“å‡ºä½ç½®æ”¹å˜ä¸ºtest.txt
 print (open('test.txt', 'r').read())
 
 
 print ('\n------------sys.stdout test-------------------\n')
 
-sys.stdout.write(str(x) + ' ' + str(y) + '\n')  # sys.stdout.writeµÈ¼ÛÓÚprint (x, y)
+sys.stdout.write(str(x) + ' ' + str(y) + '\n')  # sys.stdout.writeç­‰ä»·äºprint (x, y)
 
-temp = sys.stdout                               #±¸·İsys.stdoutÒÔ±ãºóÃæ»Ö¸´Êä³öÁ÷
-sys.stdout = open('/tmp/test.txt', 'a')         #ÖØ¶¨ÏòÄ¬ÈÏÊä³öÎ»ÖÃ(/tmp/test.txt)
+temp = sys.stdout                               #å¤‡ä»½sys.stdoutä»¥ä¾¿åé¢æ¢å¤è¾“å‡ºæµ
+sys.stdout = open('/tmp/test.txt', 'a')         #é‡å®šå‘é»˜è®¤è¾“å‡ºä½ç½®(/tmp/test.txt)
 
 print ('I Just Test !\n')
 
-sys.stdout.close()                              #¼ÇµÃÊÖ¶¯¹Ø±ÕÎÄ¼ş
+sys.stdout.close()                              #è®°å¾—æ‰‹åŠ¨å…³é—­æ–‡ä»¶
 
-sys.stdout = temp                               #»Ö¸´Ä¬ÈÏÊä³öÁ÷(ÖÕ¶Ë)
+sys.stdout = temp                               #æ¢å¤é»˜è®¤è¾“å‡ºæµ(ç»ˆç«¯)
 
 print ('hey, i am back !')
 

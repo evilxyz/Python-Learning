@@ -3,21 +3,21 @@
 
 import sys
 
-###################### ÆÕÍ¨ÊµÏÖ°æ ###############################
+###################### æ™®é€šå®ç°ç‰ˆ ###############################
 
 def print3(*args, **kargs):
-    sep = kargs.get('sep', ' ')          #ÒÔÕâÖÖĞÎÊ½´Ó**kargsÈ¡³ö²ÎÊı, Èôµ÷ÓÃÊ±Ã»ÓĞ¸øsep¸³Öµ, Ôòsep = ' '
-    end = kargs.get('end', '\n')         #Í¬ÉÏ, Èç¹ûÃ»¸øend¸³Öµ, end='\n'
-    file=kargs.get('file', sys.stdout)   #Êä³öÁ÷
+    sep = kargs.get('sep', ' ')          #ä»¥è¿™ç§å½¢å¼ä»**kargså–å‡ºå‚æ•°, è‹¥è°ƒç”¨æ—¶æ²¡æœ‰ç»™sepèµ‹å€¼, åˆ™sep = ' '
+    end = kargs.get('end', '\n')         #åŒä¸Š, å¦‚æœæ²¡ç»™endèµ‹å€¼, end='\n'
+    file=kargs.get('file', sys.stdout)   #è¾“å‡ºæµ
     output = ''
     first = True
     
     for arg in args:
-        output += ('' if first else sep) + str(arg)     #ºÜÇÉÃî, ÅĞ¶ÏÊÇ·ñÊÇµÚÒ»´Î½øÈëÑ­»·,Èç¹ûÊÇ,Ôò·µ»Ø'', ·ñÔò·µ»Øsep
+        output += ('' if first else sep) + str(arg)     #å¾ˆå·§å¦™, åˆ¤æ–­æ˜¯å¦æ˜¯ç¬¬ä¸€æ¬¡è¿›å…¥å¾ªç¯,å¦‚æœæ˜¯,åˆ™è¿”å›'', å¦åˆ™è¿”å›sep
         first = False
     file.write(output + end)
 
-###################### keyword-only ÊµÏÖ°æ #######################
+###################### keyword-only å®ç°ç‰ˆ #######################
 
 def print30(*args, sep=' ', end='\n', file=sys.stdout):
     output = ''
@@ -29,9 +29,9 @@ def print30(*args, sep=' ', end='\n', file=sys.stdout):
 
     file.write(output + end)
 
-#Õâ¸öÃ»ÓĞÅÅ´í¹¦ÄÜµÄ
+#è¿™ä¸ªæ²¡æœ‰æ’é”™åŠŸèƒ½çš„
 
-##################### ÎŞÒì³£°æ #####################################
+##################### æ— å¼‚å¸¸ç‰ˆ #####################################
 
 def print300(*args, **kargs):
     sep = kargs.pop('sep', ' ')

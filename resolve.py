@@ -1,28 +1,28 @@
 #!/usr/bin/env python
 #encoding=utf-8
 
-print ( [x * x for x in range(10)] )     # ÁĞ±í½âÎö
+print ( [x * x for x in range(10)] )     # åˆ—è¡¨è§£æ
 
-print ( (x * x for x in range(10)) )     # Éú³ÉÆ÷±í´ïÊ½
+print ( (x * x for x in range(10)) )     # ç”Ÿæˆå™¨è¡¨è¾¾å¼
 
-print ( {x * x for x in range(10)} )     # ¼¯ºÏ½âÎö
-# µÈÍ¬
-print ( set( x * x for x in range(10) ) )# ¼¯ºÏ½âÎö
-
-
-print ( {x: x*x for x in range(10)} )           # ×Öµä½âÎö
-#µÈÍ¬
-print ( dict( (x, x * x) for x in range(10) ) ) # ×Öµä½âÎö
+print ( {x * x for x in range(10)} )     # é›†åˆè§£æ
+# ç­‰åŒ
+print ( set( x * x for x in range(10) ) )# é›†åˆè§£æ
 
 
+print ( {x: x*x for x in range(10)} )           # å­—å…¸è§£æ
+#ç­‰åŒ
+print ( dict( (x, x * x) for x in range(10) ) ) # å­—å…¸è§£æ
 
-print ( [x * x for x in range(10) if x % 2 == 0] )      # ÁĞ±í½âÎö´øÌõ¼ş, ÓĞĞòÊä³ö
 
-print ( {x * x for x in range(10) if x % 2 == 0} )      # ¼¯ºÏ½âÎö´øÌõ¼ş, ÎŞĞòÊä³ö
 
-print ( {x: x * x for x in range(10) if x % 2 == 0} )   # ×Öµä½âÎö´øÌõ¼ş, ÎŞĞòÊä³ö
+print ( [x * x for x in range(10) if x % 2 == 0] )      # åˆ—è¡¨è§£æå¸¦æ¡ä»¶, æœ‰åºè¾“å‡º
 
-print ( {x + y for x in 'ab' for y in 'cd'} )           # ¼¯ºÏ½âÎöÇ¶Ì×
+print ( {x * x for x in range(10) if x % 2 == 0} )      # é›†åˆè§£æå¸¦æ¡ä»¶, æ— åºè¾“å‡º
+
+print ( {x: x * x for x in range(10) if x % 2 == 0} )   # å­—å…¸è§£æå¸¦æ¡ä»¶, æ— åºè¾“å‡º
+
+print ( {x + y for x in 'ab' for y in 'cd'} )           # é›†åˆè§£æåµŒå¥—
 
 print ( {x + y: (ord(x), ord(y)) for x in 'ab' for y in 'cd'} )
 
